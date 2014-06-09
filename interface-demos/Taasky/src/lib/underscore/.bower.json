@@ -16,7 +16,7 @@
     "*.yml",
     "*.map",
     "CNAME",
-    "index.html",
+    "setTransform.html",
     "favicon.ico",
     "CONTRIBUTING.md"
   ],

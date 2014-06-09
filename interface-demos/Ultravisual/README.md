@@ -10,7 +10,7 @@ Files
 3. StripListView.js
  
 ### ListView
-Init from main.js with a set of data (see index.html). The instance then call a PageListView and a modifier for it.
+Init from setTransform.js with a set of data (see index.html). The instance then call a PageListView and a modifier for it.
 
 ### PageListView
 Create many instance of StripListView and a modifier for each one into arrays.

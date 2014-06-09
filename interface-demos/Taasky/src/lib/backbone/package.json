@@ -13,7 +13,7 @@
     "coffee-script": "1.6.1"
   },
   "scripts": {
-    "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true && coffee test/model.coffee",
+    "test": "phantomjs test/vendor/runner.js test/setTransform.html?noglobals=true && coffee test/model.coffee",
     "build": "uglifyjs backbone.js --mangle --source-map backbone-min.map -o backbone-min.js",
     "doc": "docco backbone.js && docco examples/todos/todos.js examples/backbone.localstorage.js",
     "lint": "jsl -nofilelisting -nologo -conf docs/jsl.conf -process backbone.js"

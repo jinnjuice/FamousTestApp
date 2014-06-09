@@ -8,17 +8,42 @@ define(function(require, exports, module) {
     // create the main context
     var mainContext = Engine.createContext();
 
-    var stateModifier = new StateModifier({
-        transform: Transform.translate(300, 100, 0)
-    });
+    createSurface();
+    createModifiedSurface();
 
     // your app here
-    var firstSurface = new Surface({
-        size: [100, 100],
-        properties: {
-            backgroundColor: '#FA5C4F'
-        }
-    });
 
-    mainContext.add(stateModifier).add(firstSurface);
+    // unmodified surface
+    function createSurface() {
+        var surface = new Surface({
+            size: [200, 200],
+            content: 'surface',
+            properties: {
+                color: 'white',
+                textAlign: 'center',
+                backgroundColor: '#fa5c4f'
+            }
+        });
+
+        mainContext.add(surface);
+    }
+
+    // modified surface
+    function createModifiedSurface() {
+        var modifiedSurface = new Surface({
+            size: [200, 200],
+            content: 'modified surface',
+            properties: {
+                color: 'white',
+                textAlign: 'center',
+                backgroundColor: '#fa5c4f'
+            }
+        });
+
+        var stateModifier = new StateModifier({
+            transform: Transform.translate(350, 300, 0)
+        });
+
+        mainContext.add(stateModifier).add(modifiedSurface);
+    }
 });
